@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="pl.project13"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <application android:name=".guice.SzczecinWorkshopApplication"
+                 android:label="@string/app_name"
+                 android:icon="@drawable/icon">
+
+        <activity android:name=".activity.ButtonActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.TasksActivity"/>
+        <activity android:name=".activity.AdapterActivity"/>
+        <activity android:name=".activity.SettingsActivity"/>
+        <service android:name=".service.RandomNumbersService"/>
+
+        <receiver android:name=".widget.NumberWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="pl.project.NEW_RANDOM_NUMBER"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                       android:resource="@xml/number_widget"/>
+        </receiver>
+    </application>
+</manifest> 

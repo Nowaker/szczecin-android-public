@@ -1,0 +1,6 @@
+<resources>
+    <style name="while_font">
+        <item name="android:color">#ffffff</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+</resources>
